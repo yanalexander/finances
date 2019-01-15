@@ -5,22 +5,18 @@ import br.com.yanvenera.finances.util.JPAUtil;
 
 import javax.persistence.EntityManager;
 
-public class AccountTest {
+public class RemoveAccount {
 
     public static void main(String[] args){
 
-        Account account = new Account();
-        account.setAccount("123456");
-        account.setBank("Santander");
-        account.setBranch("0101");
-        account.setHolder("Mr. Johnson");
-
         EntityManager em = new JPAUtil().getEntityManager();
-
         em.getTransaction().begin();
-        em.persist(account);
-        em.getTransaction().commit();
 
+        Account account = em.find(Account.class, 1);
+
+
+        em.remove(account);
+        em.getTransaction().commit();
         em.close();
     }
 }
