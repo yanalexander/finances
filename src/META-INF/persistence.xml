@@ -8,6 +8,9 @@
 
         <!-- Aqui são listadas todas as entidades -->
         <class>br.com.yanvenera.finances.model.Account</class>
+        <class>br.com.yanvenera.finances.model.Transation</class>
+        <class>br.com.yanvenera.finances.model.Category</class>
+        <class>br.com.yanvenera.finances.model.Client</class>
 
         <properties>    
             <!-- Propriedades JDBC -->
