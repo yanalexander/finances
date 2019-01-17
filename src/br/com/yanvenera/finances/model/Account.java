@@ -1,9 +1,7 @@
 package br.com.yanvenera.finances.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Account {
@@ -15,6 +13,9 @@ public class Account {
     private String account;
     private String bank;
     private String branch;
+
+    @OneToMany(mappedBy = "account")
+    private List<Transation> transationList;
 
     public Integer getId() {
         return id;
@@ -54,5 +55,13 @@ public class Account {
 
     public void setBranch(String branch) {
         this.branch = branch;
+    }
+
+    public List<Transation> getTransationList() {
+        return transationList;
+    }
+
+    public void setTransationList(List<Transation> transationList) {
+        this.transationList = transationList;
     }
 }
