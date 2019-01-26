@@ -7,6 +7,9 @@ import java.util.List;
 
 
 @Entity
+@NamedQuery( query = "select sum(t.value) from Transation t where t.account = :pAccount " +
+                     "group by day(t.date), month(t.date), year(t.date)",
+            name = "SOMA_POR_DIA")
 public class Transation {
 
     @Id

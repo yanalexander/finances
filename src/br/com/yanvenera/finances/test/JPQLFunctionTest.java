@@ -1,5 +1,6 @@
 package br.com.yanvenera.finances.test;
 
+import br.com.yanvenera.finances.dao.TransationDAO;
 import br.com.yanvenera.finances.model.Account;
 import br.com.yanvenera.finances.model.Transation;
 import br.com.yanvenera.finances.util.JPAUtil;
@@ -20,12 +21,8 @@ public class JPQLFunctionTest {
         Account account = new Account();
         account.setId(8);
 
-        String jpql = "select sum(t.value) from Transation t where t.account = :pAccount " +
-                " group by day(t.date), month(t.date), year(t.date)";
-        TypedQuery<BigDecimal> query = em.createQuery(jpql, BigDecimal.class);
-        query.setParameter("pAccount",account);
-
-        List<BigDecimal> somas = (List<BigDecimal>) query.getResultList();
+        TransationDAO transationDao = new TransationDAO(em);
+        List<BigDecimal> somas = transationDao.getSomaPorDia(account);
 
         for (BigDecimal soma :somas) {
             System.out.println("A soma é: "+soma);

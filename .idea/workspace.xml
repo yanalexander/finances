@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52661d9e-5214-4ce9-9d70-9d30c941ce91" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/br/com/yanvenera/finances/test/JPQLFunctionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/yanvenera/finances/dao/TransationDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/finances/br/com/yanvenera/finances/test/JPQLTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/finances/br/com/yanvenera/finances/test/JPQLTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/yanvenera/finances/test/JPQLTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/yanvenera/finances/test/JPQLTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/yanvenera/finances/model/Transation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/yanvenera/finances/model/Transation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/yanvenera/finances/test/JPQLFunctionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/yanvenera/finances/test/JPQLFunctionTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,20 +100,34 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/com/yanvenera/finances/test/JPQLFunctionTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="24" column="76" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/com/yanvenera/finances/dao/TransationDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="19" column="67" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="19" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#393#394#0" expanded="true" />
+                <element signature="e#421#422#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/br/com/yanvenera/finances/model/Transation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="26" column="27" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="27" />
+            <state relative-caret-position="120">
+              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#585#586#0" expanded="true" />
@@ -178,7 +192,6 @@
         <option value="$PROJECT_DIR$/src/br/com/yanvenera/finances/model/TransationType.java" />
         <option value="$PROJECT_DIR$/src/br/com/yanvenera/finances/test/TransationTest.java" />
         <option value="$PROJECT_DIR$/src/br/com/yanvenera/finances/model/Category.java" />
-        <option value="$PROJECT_DIR$/src/br/com/yanvenera/finances/model/Transation.java" />
         <option value="$PROJECT_DIR$/src/br/com/yanvenera/finances/model/Client.java" />
         <option value="$PROJECT_DIR$/src/br/com/yanvenera/finances/test/TransactionTesteWithCategory.java" />
         <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
@@ -187,7 +200,9 @@
         <option value="$PROJECT_DIR$/src/br/com/yanvenera/finances/test/TransationAccounTest.java" />
         <option value="$PROJECT_DIR$/src/br/com/yanvenera/finances/model/Account.java" />
         <option value="$PROJECT_DIR$/src/br/com/yanvenera/finances/test/JPQLTest.java" />
+        <option value="$PROJECT_DIR$/src/br/com/yanvenera/finances/dao/TransationDAO.java" />
         <option value="$PROJECT_DIR$/src/br/com/yanvenera/finances/test/JPQLFunctionTest.java" />
+        <option value="$PROJECT_DIR$/src/br/com/yanvenera/finances/model/Transation.java" />
       </list>
     </option>
   </component>
@@ -223,6 +238,13 @@
               <item name="finances" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="finances" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="finances" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finances" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="finances" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="finances" type="b2602c69:ProjectViewProjectNode" />
@@ -266,7 +288,7 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548503369831" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548504164036" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../sroferta" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -390,18 +412,18 @@
       <workItem from="1547597830714" duration="2697000" />
       <workItem from="1547683190696" duration="4361000" />
       <workItem from="1548116673064" duration="597000" />
-      <workItem from="1548502633747" duration="742000" />
+      <workItem from="1548502633747" duration="1719000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18317000" />
+    <option name="totallyTimeSpent" value="19294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="32" y="-1" width="1334" height="768" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26863354" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26863354" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -410,7 +432,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20186335" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20186335" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -583,26 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/yanvenera/finances/model/Transation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-            <element signature="e#1067#1068#0" expanded="true" />
-            <element signature="e#1099#1100#0" expanded="true" />
-            <element signature="e#1225#1226#0" expanded="true" />
-            <element signature="e#1271#1272#0" expanded="true" />
-            <element signature="e#1468#1469#0" expanded="true" />
-            <element signature="e#1503#1504#0" expanded="true" />
-            <element signature="e#1567#1568#0" expanded="true" />
-            <element signature="e#1615#1616#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/yanvenera/finances/model/TransationType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -654,7 +656,39 @@
     <entry file="file://$PROJECT_DIR$/src/br/com/yanvenera/finances/test/JPQLFunctionTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="24" column="76" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/yanvenera/finances/dao/TransationDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="67" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="19" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/yanvenera/finances/model/Transation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#1067#1068#0" expanded="true" />
+            <element signature="e#1099#1100#0" expanded="true" />
+            <element signature="e#1225#1226#0" expanded="true" />
+            <element signature="e#1271#1272#0" expanded="true" />
+            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#1503#1504#0" expanded="true" />
+            <element signature="e#1567#1568#0" expanded="true" />
+            <element signature="e#1615#1616#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
