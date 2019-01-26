@@ -3,13 +3,14 @@ package br.com.yanvenera.finances.test;
 import br.com.yanvenera.finances.model.Account;
 import br.com.yanvenera.finances.model.Transation;
 import br.com.yanvenera.finances.util.JPAUtil;
-import org.hibernate.Transaction;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+import java.math.BigDecimal;
 import java.util.List;
 
-public class JPQLTest {
+public class JPQLFunctionTest {
 
     public static void main(String[] args){
 
@@ -19,18 +20,16 @@ public class JPQLTest {
         Account account = new Account();
         account.setId(8);
 
-        String jpql = "select t from Transation t where t.account = :pAccount " +
-                "order by t.description";
-        Query query = em.createQuery(jpql);
+        String jpql = "select sum(t.value) from Transation t where t.account = :pAccount " +
+                " group by day(t.date), month(t.date), year(t.date)";
+        TypedQuery<BigDecimal> query = em.createQuery(jpql, BigDecimal.class);
         query.setParameter("pAccount",account);
 
-        List<Transation> result = query.getResultList();
+        List<BigDecimal> somas = (List<BigDecimal>) query.getResultList();
 
-        for (Transation t :result) {
-            System.out.println("Transation description: "+t.getDescription());
+        for (BigDecimal soma :somas) {
+            System.out.println("A soma é: "+soma);
         }
-
-        em.getTransaction().commit();
 
         em.close();
     }
